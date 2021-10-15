@@ -13,24 +13,24 @@
 <script>
 export default {
   name: "CProjects",
-  data () {
-    return {
-      query: ''
-    }
-  },
   computed: {
-    filterByQuery () {
-      const list = this.$store.getters.allProjects;
-      return list.filter(item => {
-        return item.name.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
-      })
+    filterByQuery() {
+      return this.$store.getters.filterByQuery
+    },
+    query: {
+      set(value) {
+        this.$store.commit("setQuery", value);
+      },
+      get() {
+        return this.$store.getters.getQuery;
+      }
     }
   },
   methods: {
     locationReplace: (link) => {
       location.href = link
     }
-  },
+  }
 }
 </script>
 
