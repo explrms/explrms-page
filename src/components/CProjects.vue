@@ -41,10 +41,11 @@ export default {
   border-radius: 10px;
   box-shadow: rgba(103, 119, 141, 0.68) 0 0 1rem 2px;
   margin-top: 2rem;
-  width: 50vw;
+  width: 60vw;
   transition: 1s;
 }
 .projectItem button {
+  width: 20%;
   margin-left: 1rem;
   margin-bottom: 1rem;
   background-color: transparent; /* Green */

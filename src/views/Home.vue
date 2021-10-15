@@ -21,7 +21,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
 .home {
   padding-top: 1.5rem;
-  padding-left: 25vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 .title {
   font-family: 'Fira Sans', sans-serif;
