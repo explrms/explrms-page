@@ -1,6 +1,6 @@
 import {mount} from '@vue/test-utils'
 import Home from '@/views/Home.vue'
-import { store } from '../../src/store'
+import { store } from '@/store'
 
 describe('Render Home View', () => {
     it('Render info', () => {
@@ -16,8 +16,9 @@ describe('Render Home View', () => {
         expect(wrapper.text()).toMatch(text)
     });
     it('Render input and change query', () => {
-        const text = 'DZ'
+        const title = "DZ";
         const $store = JSON.parse(JSON.stringify(store));
+        // eslint-disable-next-line no-unused-vars
         const wrapper = mount(Home, {
             global: {
                 mocks: {
@@ -25,9 +26,8 @@ describe('Render Home View', () => {
                 }
             }
         })
-        const input = wrapper.find('input')
-        input.setValue(text)
-        input.trigger('change')
-        expect($store.state.query).toMatch(text)
-    })
+        store.commit("setQuery", title);
+        const query = store.state.query;
+        expect(query).toMatch(title);
+    });
 })

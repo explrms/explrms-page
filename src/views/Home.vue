@@ -3,7 +3,7 @@
     <p class="title">👋Hi, Im Daniil Savchenkov!</p>
     <p class="text">I am a 20-year-old student programmer from Russia.</p>
     <p class="text">Here are a few of my projects that may be about my activities.</p>
-    <CProjects />
+    <CProjects ref="CProjects"/>
   </div>
 </template>
 
