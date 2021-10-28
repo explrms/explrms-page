@@ -1,19 +1,19 @@
-import Vuex from 'vuex'
+import {createStore} from 'vuex'
 import {initialState} from "./initialState";
 
 
-export const store = new Vuex.Store({
+export const config = {
   state: initialState,
   mutations: {
-    setQuery: (state, query) => {
+    setQuery(state, query) {
       state.query = query
     }
   },
   getters: {
-    allProjects: state => {
+    allProjects(state) {
       return state.projects;
     },
-    getQuery: state => {
+    getQuery(state) {
       return state.query;
     },
     filterByQuery(state) {
@@ -23,4 +23,6 @@ export const store = new Vuex.Store({
       })
     }
   }
-})
+};
+
+export const store = createStore(config);

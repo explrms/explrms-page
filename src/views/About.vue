@@ -126,7 +126,7 @@ body {
   width: 8px;
   background-color: #ffffff;
   bottom: -3px;
-  left: 50%;
+  left: 50vw;
   transform: translate(-50%) rotate(45deg);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }

@@ -12,22 +12,7 @@ describe('Render Home View', () => {
                     $store
                 }
             }
-        })
-        expect(wrapper.text()).toMatch(text)
+        });
+        expect(wrapper.text()).toMatch(text);
     });
-    it('Render input and change query', () => {
-        const title = "DZ";
-        const $store = JSON.parse(JSON.stringify(store));
-        // eslint-disable-next-line no-unused-vars
-        const wrapper = mount(Home, {
-            global: {
-                mocks: {
-                    $store
-                }
-            }
-        })
-        store.commit("setQuery", title);
-        const query = store.state.query;
-        expect(query).toMatch(title);
-    });
-})
+});

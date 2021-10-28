@@ -2,12 +2,12 @@
   <form class="align-left searchForm">
     <input class="queryInput" v-model="query" placeholder="🔍Search. . .">
   </form>
-  <div class="projectList"></div>
   <div :style="project.style" class="projectItem align-left" v-for="project in filterByQuery" :key="project.name">
       <p class="projectName">{{project.name}}</p>
       <p class="projectDescription">{{project.description}}</p>
     <button v-on:click="locationReplace(project.linkTo.url)">{{project.linkTo.name}}</button>
   </div>
+  <br><br>
 </template>
 
 <script>
@@ -35,8 +35,6 @@ export default {
 </script>
 
 <style scoped>
-.projectList {
-}
 .projectItem {
   border-radius: 10px;
   box-shadow: rgba(103, 119, 141, 0.68) 0 0 1rem 2px;
@@ -45,7 +43,7 @@ export default {
   transition: 1s;
 }
 .projectItem button {
-  width: 20%;
+  width: 15vw;
   margin-left: 1rem;
   margin-bottom: 1rem;
   background-color: transparent; /* Green */
@@ -90,7 +88,7 @@ export default {
   padding:8px;
   box-sizing:border-box;
   transition:.3s;
-  width: 25%;
+  width: 60vw;
 }
 .searchForm {
   padding-top: 1rem;

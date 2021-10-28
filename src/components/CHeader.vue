@@ -29,12 +29,14 @@ export default {
   border-radius: 0 0 20px 20px;
 }
 .header-text {
+  padding-left: 9vw;
   font-family: 'Rubik Mono One', sans-serif;
   color: #ffd800;
   font-size: 3rem;
   margin-left: 2rem;
 }
 .header-logo {
+  padding-left: 9vw;
   margin-left: 2rem;
   transform: scale(3);
 }
@@ -46,6 +48,6 @@ export default {
   color: antiquewhite;
 }
 .nav-menu {
-  padding-left: 5%;
+  padding-left: 5vw;
 }
 </style>

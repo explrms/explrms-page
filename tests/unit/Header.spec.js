@@ -6,5 +6,5 @@ describe('Render Header', () => {
     const msg = 'EXP1RMS'
     const wrapper = shallowMount(Header)
     expect(wrapper.text()).toMatch(msg)
-  })
+  });
 })
