@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-      <p class="title">👇There are some social and other links that can tell about me:</p>
+      <p class="title">{{ $t('social') }}</p>
     <div class="wrapper">
       <div class="icon facebook">
         <div class="tooltip">Facebook</div>
@@ -42,6 +42,17 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "ru": {
+    "social": "👇Здесь можно найти ссылки на социальные сети, они могут больше рассказать обо мне:"
+  },
+  "en": {
+    "social": "👇There are some social and other links that can tell about me:"
+  }
+}
+</i18n>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");

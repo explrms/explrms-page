@@ -1,11 +1,11 @@
 <template>
   <form class="align-left searchForm">
-    <input class="queryInput" v-model="query" placeholder="🔍Search. . .">
+    <input class="queryInput" v-model="query" v-bind:placeholder="$t('search')">
   </form>
   <div :style="project.style" class="projectItem align-left" v-for="project in filterByQuery" :key="project.name">
       <p class="projectName">{{project.name}}</p>
-      <p class="projectDescription">{{project.description}}</p>
-    <button v-on:click="locationReplace(project.linkTo.url)">{{project.linkTo.name}}</button>
+      <p class="projectDescription">{{project.description[storeLocale]}}</p>
+    <button v-on:click="locationReplace(project.linkTo.url)">{{project.linkTo.name[storeLocale]}}</button>
   </div>
   <br><br>
 </template>
@@ -16,6 +16,9 @@ export default {
   computed: {
     filterByQuery() {
       return this.$store.getters.filterByQuery
+    },
+    storeLocale() {
+      return this.$store.getters.getLocale;
     },
     query: {
       set(value) {
@@ -33,6 +36,17 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "ru": {
+    "search": "🔍Поиск. . ."
+  },
+  "en": {
+    "search": "🔍Search. . ."
+  }
+}
+</i18n>
 
 <style scoped>
 .projectItem {

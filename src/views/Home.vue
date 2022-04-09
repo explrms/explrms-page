@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <p class="title">👋Hi, Im Daniil Savchenkov!</p>
-    <p class="text">I am a 20-year-old student programmer from Russia.</p>
-    <p class="text">Here are a few of my projects that may be about my activities.</p>
+    <p class="title">{{ $t('hiim') }}</p>
+    <p class="text">{{ $t('im20') }}</p>
+    <p class="text">{{ $t('myprojects') }}</p>
     <CProjects ref="CProjects"/>
   </div>
 </template>
@@ -17,6 +17,22 @@ export default {
   }
 }
 </script>
+
+<i18n>
+{
+  "ru": {
+    "hiim": "👋Привет, я Даниил Савченков.",
+    "im20": "Я студент из России, мне 20 и я увлекаюсь веб-разработкой.",
+    "myprojects": "Это некотоыре из моих проектов, которые расскажут о моей деятельности."
+  },
+  "en": {
+    "hiim": "👋Hi, Im Daniil Savchenkov!",
+    "im20": "I am a 20-year-old student and web-developer from Russia.",
+    "myprojects": "Here are a few of my projects that may be about my activities."
+  },
+}
+</i18n>
+
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
 .home {

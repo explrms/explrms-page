@@ -1,6 +1,6 @@
 <template>
   <div class="header-gradient">
-    <img class="header-logo" src="../assets/img/bolt_black_24dp.svg" alt="logo"><div class="header-text">EXP1RMS</div>
+    <img class="header-logo" src="../assets/img/bolt_black_24dp.svg" alt="logo"><div class="header-text">EXPLRMS</div>
     <div class="nav-menu">
       <router-link class="router-link" to="/">
         <img class="router-link-img" src="../assets/img/home-icon.png" alt="home">
@@ -9,12 +9,15 @@
         <img class="router-link-img" style="padding-left: 1rem" src="../assets/img/info-icon.png" alt="about">
       </router-link>
     </div>
+    <LocaleSwitcher/>
   </div>
 </template>
 
 <script>
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 export default {
-  name: "CHeader"
+  name: "CHeader",
+  components: {LocaleSwitcher}
 }
 </script>
 

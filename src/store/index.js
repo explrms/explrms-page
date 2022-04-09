@@ -7,7 +7,10 @@ export const config = {
   mutations: {
     setQuery(state, query) {
       state.query = query
-    }
+    },
+    setLocale(state, locale) {
+      state.locale = locale
+    },
   },
   getters: {
     allProjects(state) {
@@ -21,6 +24,9 @@ export const config = {
       return list.filter(item => {
         return item.name.toLowerCase().includes(state.query.toLowerCase());
       })
+    },
+    getLocale(state) {
+      return state.locale
     }
   }
 };
