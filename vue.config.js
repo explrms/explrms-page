@@ -9,5 +9,8 @@ module.exports = {
       compositionOnly: true,
       fullInstall: true
     }
+  },
+  devServer: {
+    public: 'explrms.space:80'
   }
 }
