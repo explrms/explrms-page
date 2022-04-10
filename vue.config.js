@@ -11,6 +11,6 @@ module.exports = {
     }
   },
   devServer: {
-    public: 'explrms.space'
+    public: 'explrms.space:80'
   }
 }
