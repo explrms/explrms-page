@@ -110,4 +110,26 @@ export default {
 .align-left {
   text-align: left;
 }
+@media screen and (max-width: 1000px) {
+  .queryInput {
+    width: 84vw;
+  }
+  .projectItem {
+    width: 84vw;
+    margin-top: 5vw;
+  }
+  .projectName {
+    font-size: 2rem;
+  }
+  .projectDescription {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+  .projectItem button {
+    width: 40vw;
+    padding: 10px 8px;
+    font-size: 3vw;
+  }
+}
 </style>

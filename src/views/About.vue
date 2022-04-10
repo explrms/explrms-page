@@ -188,5 +188,31 @@ body {
   background-color: #0077FF;
   color: #ffffff;
 }
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 5vw;
+  }
+  .about {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .wrapper .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 9vw;
+    height: 9vw;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
 
 </style>

@@ -6,7 +6,7 @@
         <img class="router-link-img" src="../assets/img/home-icon.png" alt="home">
       </router-link>
       <router-link class="router-link" to="/about">
-        <img class="router-link-img" style="padding-left: 1rem" src="../assets/img/info-icon.png" alt="about">
+        <img class="router-link-img" src="../assets/img/info-icon.png" alt="about">
       </router-link>
     </div>
     <LocaleSwitcher/>
@@ -52,5 +52,20 @@ export default {
 }
 .nav-menu {
   padding-left: 5vw;
+}
+@media screen and (max-width: 1000px) {
+  .header-text {
+    padding-left: 3vw;
+    font-size: 7vw;
+    margin-left: 4vw;
+  }
+  .header-logo {
+    padding-left: 5vw;
+    margin-left: 2vw;
+    transform: scale(2);
+  }
+  .router-link-img {
+    width: 2rem;
+  }
 }
 </style>

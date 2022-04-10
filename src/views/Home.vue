@@ -50,5 +50,17 @@ export default {
   font-size: 1.3rem;
   text-align: left;
 }
-
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 2rem;
+    text-align: left;
+  }
+  .home {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  .text {
+    font-size: 1rem;
+  }
+}
 </style>

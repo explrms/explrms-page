@@ -45,4 +45,12 @@ li {
   width:3.5rem;
   cursor: pointer;
 }
+@media screen and (max-width: 1000px) {
+  .locales {
+    padding-left: 5vw;
+  }
+  .locales_flag {
+    width:2rem;
+  }
+}
 </style>
