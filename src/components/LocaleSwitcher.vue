@@ -1,56 +1,61 @@
 <template>
-  <div class="locales">
-    <img class="locales_flag" v-for="locale in locales" :key="locale" v-bind:src="getPicUrl(locale)" @click="switchLocale(locale)"/>
-  </div>
+    <div className="locales">
+        <img className="locales_flag" v-for="locale in locales" :key="locale" v-bind:src="getPicUrl(locale)" @click="switchLocale(locale)"/>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'LocaleSwitcher',
-  computed: {
-    storeLocale() {
-      return this.$store.getters.getLocale;
+    name: 'LocaleSwitcher',
+    computed: {
+        storeLocale() {
+            return this.$store.getters.getLocale;
+        },
     },
-  },
-  methods: {
-    switchLocale(locale) {
-      if (this.$i18n.locale !== locale) {
-        this.$i18n.locale = locale;
-        this.$store.commit("setLocale", locale);
-      }
+    methods: {
+        switchLocale(locale) {
+            if (this.$i18n.locale !== locale) {
+                this.$i18n.locale = locale;
+                this.$store.commit("setLocale", locale);
+                localStorage.setItem('selectedLocale', locale); // Сохранение выбранного языка в localStorage
+            }
+        },
+        getPicUrl(locale) {
+            return require(`../assets/img/${locale}_flag.png`) // the module request
+        }
     },
-    getPicUrl(locale) {
-      return require(`../assets/img/${locale}_flag.png`) // the module request
+    data() {
+        return {
+            locales: process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(',')
+        }
     }
-  },
-  data() {
-    return {
-      locales: process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(',')
-    }
-  }
 }
 </script>
 
 <style scoped>
 li {
-  text-decoration: underline;
-  color: #459CE7;
-  cursor: pointer;
+    text-decoration: underline;
+    color: #459CE7;
+    cursor: pointer;
 }
+
 .locales {
-  padding-left: 25vw;
-  padding-right: 3vw;
+    padding-left: 25vw;
+    padding-right: 3vw;
 }
+
 .locales_flag {
-  width:3.5rem;
-  cursor: pointer;
+    width: 3.5rem;
+    cursor: pointer;
 }
+
 @media screen and (max-width: 1000px) {
-  .locales {
-    padding-left: 5vw;
-  }
-  .locales_flag {
-    width:2rem;
-  }
+    .locales {
+        padding-left: 5vw;
+    }
+
+    .locales_flag {
+        width: 2rem;
+    }
 }
 </style>

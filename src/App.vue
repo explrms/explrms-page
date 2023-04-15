@@ -6,6 +6,7 @@
 
 <script>
 import CHeader from "./components/CHeader";
+import '@/assets/css/_main.css';
 export default {
   components: {CHeader}
 }

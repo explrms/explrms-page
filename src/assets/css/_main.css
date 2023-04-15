@@ -1,0 +1,11 @@
+.d-flex {
+    display: flex;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.page-title {
+    font-weight: 800;
+    font-size: 3rem;
+}

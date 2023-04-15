@@ -30,6 +30,7 @@ export default {
   background: linear-gradient(145deg, rgb(58, 60, 61) 0%, rgb(35, 34, 34) 100%);
   box-shadow: rgba(103, 119, 141, 0.68) 0 0 1rem 2px;
   border-radius: 0 0 20px 20px;
+  margin-bottom: 1rem;
 }
 .header-text {
   padding-left: 9vw;

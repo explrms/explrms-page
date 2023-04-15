@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port 80",
+    "serve": "vue-cli-service serve --port 8080",
     "build": "vue-cli-service build --port 80",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
@@ -13,8 +13,10 @@
     "@vue/cli": "^4.5.14",
     "core-js": "^3.6.5",
     "vue": "^3.2.20",
+    "vue-cli": "^2.9.6",
     "vue-i18n": "^9.1.0",
     "vue-router": "^4.0.0-0",
+    "vue3-picture-swipe": "^3.0.6",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
